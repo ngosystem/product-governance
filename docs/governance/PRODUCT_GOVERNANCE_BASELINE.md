@@ -13,6 +13,7 @@ NGOSYSTEM_TENANT_REGISTRY_RECORDED
 NGOSYSTEM_PRODUCT_RELEASE_GATES_RECORDED
 NGOSYSTEM_PRODUCTIZATION_ROADMAP_RECORDED
 NGOSYSTEM_PRODUCT_MODULE_REGISTRY_RECORDED
+NGOSYSTEM_OPEN_PRODUCTIZATION_DECISIONS_RECORDED
 NO_CODE_TRANSFER
 NO_RUNTIME_EFFECT
 NOT_PRODUCTION_READY
@@ -37,6 +38,7 @@ It records:
 - product release gate model;
 - productization roadmap;
 - product module registry;
+- open productization decision backlog;
 - status discipline;
 - implementation evidence source links;
 - roadmap and governance decisions.
@@ -121,6 +123,12 @@ The product module registry is recorded in:
 
 ```text
 docs/roadmap/PRODUCT_MODULE_REGISTRY.md
+```
+
+Open productization decisions are recorded in:
+
+```text
+docs/roadmap/OPEN_PRODUCTIZATION_DECISIONS.md
 ```
 
 Current boundary:

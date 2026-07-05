@@ -5,6 +5,7 @@ Status:
 ```text
 NGOSYSTEM_PRODUCTIZATION_ROADMAP_RECORDED
 NGOSYSTEM_PRODUCT_MODULE_REGISTRY_RECORDED
+NGOSYSTEM_OPEN_PRODUCTIZATION_DECISIONS_RECORDED
 PHASED_PRODUCTIZATION_PATH_RECORDED
 NO_REPOSITORY_TRANSFER
 NO_RUNTIME_EFFECT
@@ -149,6 +150,12 @@ The current product-module registry is recorded in:
 docs/roadmap/PRODUCT_MODULE_REGISTRY.md
 ```
 
+Open productization decisions are recorded in:
+
+```text
+docs/roadmap/OPEN_PRODUCTIZATION_DECISIONS.md
+```
+
 ## Phase P5 - Production Candidate
 
 `PRODUCTION_CANDIDATE` requires the gate families from
@@ -187,8 +194,9 @@ Recommended next governance items:
 
 1. keep product-governance docs current;
 2. link implementation evidence only by scoped status;
-3. prepare repository-transfer decision only when transfer becomes necessary;
-4. prepare tenant production-candidate record only when RC Silesia moves beyond pilot/staging.
+3. maintain the open productization decision backlog;
+4. prepare repository-transfer decision only when transfer becomes necessary;
+5. prepare tenant production-candidate record only when RC Silesia moves beyond pilot/staging.
 
 ## Forbidden Claims
 
