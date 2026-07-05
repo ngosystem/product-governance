@@ -19,6 +19,7 @@ NGOSYSTEM_REPOSITORY_VISIBILITY_POLICY_RECORDED
 NGOSYSTEM_BRANCH_PROTECTION_REQUIRED_CHECKS_POLICY_RECORDED
 NGOSYSTEM_GITHUB_BRANCH_PROTECTION_RECON_RECORDED
 NGOSYSTEM_CONTINUOUS_QUALITY_LOOP_RECORDED
+NGOSYSTEM_CRYSTALLINE_SOFTWARE_MINIMALISM_RECORDED
 NO_CODE_TRANSFER
 NO_RUNTIME_EFFECT
 NOT_PRODUCTION_READY
@@ -49,6 +50,7 @@ It records:
 - branch protection and required checks policy;
 - branch protection and required checks recon;
 - continuous quality loop for product-governance documents;
+- crystalline software minimalism principle;
 - status discipline;
 - implementation evidence source links;
 - roadmap and governance decisions.
@@ -169,6 +171,12 @@ The current product-governance continuous quality loop is recorded in:
 
 ```text
 docs/governance/CONTINUOUS_QUALITY_LOOP.md
+```
+
+The current crystalline software minimalism principle is recorded in:
+
+```text
+docs/governance/CRYSTALLINE_SOFTWARE_MINIMALISM.md
 ```
 
 Current boundary:

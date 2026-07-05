@@ -6,6 +6,7 @@ Status:
 NGOSYSTEM_CONTINUOUS_QUALITY_LOOP_RECORDED
 PRODUCT_GOVERNANCE_QUALITY_CHECK_REPORTED_WIRED
 QUALITY_LOOP_CI_WORKFLOW_REPORTED_WIRED
+NGOSYSTEM_CRYSTALLINE_SOFTWARE_MINIMALISM_RECORDED
 NO_BRANCH_PROTECTION_CHANGE
 NO_REQUIRED_CHECKS_CONFIGURATION_CHANGE
 NO_RUNTIME_EFFECT
@@ -69,6 +70,12 @@ npm run check
 ```
 
 The checker is dependency-free and uses Node.js built-in modules only.
+
+This shape follows the crystalline software minimalism principle:
+
+```text
+docs/governance/CRYSTALLINE_SOFTWARE_MINIMALISM.md
+```
 
 It checks:
 

@@ -16,6 +16,7 @@ const requiredDocs = [
   "docs/governance/BRANCH_PROTECTION_REQUIRED_CHECKS_POLICY.md",
   "docs/governance/GITHUB_BRANCH_PROTECTION_RECON_2026-07-06.md",
   "docs/governance/CONTINUOUS_QUALITY_LOOP.md",
+  "docs/governance/CRYSTALLINE_SOFTWARE_MINIMALISM.md",
   "docs/roadmap/OPEN_PRODUCTIZATION_DECISIONS.md"
 ];
 
