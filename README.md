@@ -4,6 +4,7 @@ Status:
 
 ```text
 NGOSYSTEM_PRODUCT_GOVERNANCE_REPO_INITIALIZED
+REPO_MAP_RECORDED
 NGOSYSTEM_PRODUCT_FAMILY_RECORDED
 NGO_PRODUCT_NAMING_ARCHITECTURE_READY
 RC_SILESIA_FIRST_TENANT_BOUNDARY_RECORDED
@@ -49,6 +50,7 @@ whole ngOSystem platform.
 
 ## Initial Documents
 
+- [Product Governance Baseline](docs/governance/PRODUCT_GOVERNANCE_BASELINE.md)
 - [ngOSystem Product Family](docs/brand/NGOSYSTEM_PRODUCT_FAMILY.md)
 - [Ownership And Tenant Boundary](docs/governance/OWNERSHIP_AND_TENANT_BOUNDARY.md)
 - [ngOSystem Repository Map](docs/governance/REPOSITORY_MAP.md)

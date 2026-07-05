@@ -4,6 +4,7 @@ Status:
 
 ```text
 NGOSYSTEM_REPOSITORY_MAP_RECORDED
+REPO_MAP_RECORDED
 PRODUCT_TENANT_REPOSITORY_BOUNDARY_RECORDED
 NO_REPOSITORY_TRANSFER
 NO_RUNTIME_EFFECT
@@ -54,4 +55,3 @@ This document does not claim:
 - completed backend transfer;
 - completed tenant-template extraction;
 - deployment or runtime activation.
-
