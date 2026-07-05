@@ -16,6 +16,7 @@ NGOSYSTEM_PRODUCT_MODULE_REGISTRY_RECORDED
 NGOSYSTEM_OPEN_PRODUCTIZATION_DECISIONS_RECORDED
 NGOSYSTEM_TENANT_TEMPLATE_STRATEGY_RECORDED
 NGOSYSTEM_REPOSITORY_VISIBILITY_POLICY_RECORDED
+NGOSYSTEM_BRANCH_PROTECTION_REQUIRED_CHECKS_POLICY_RECORDED
 NO_CODE_TRANSFER
 NO_RUNTIME_EFFECT
 NOT_PRODUCTION_READY
@@ -43,6 +44,7 @@ It records:
 - open productization decision backlog;
 - tenant-template strategy;
 - repository visibility policy;
+- branch protection and required checks policy;
 - status discipline;
 - implementation evidence source links;
 - roadmap and governance decisions.
@@ -147,10 +149,18 @@ The repository visibility policy is recorded in:
 docs/governance/REPOSITORY_VISIBILITY_POLICY.md
 ```
 
+The branch protection and required checks policy is recorded in:
+
+```text
+docs/governance/BRANCH_PROTECTION_REQUIRED_CHECKS_POLICY.md
+```
+
 Current boundary:
 
 ```text
 REPO_MAP_RECORDED
+NO_BRANCH_PROTECTION_CHANGE
+NO_REQUIRED_CHECKS_CONFIGURATION_CHANGE
 NO_CODE_TRANSFER
 ```
 
