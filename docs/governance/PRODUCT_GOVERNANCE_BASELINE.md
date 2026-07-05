@@ -8,6 +8,7 @@ REPO_MAP_RECORDED
 NGOSYSTEM_GITHUB_OPERATING_MODEL_RECORDED
 NGOSYSTEM_DECISION_LOG_RECORDED
 NGOSYSTEM_STATUS_EVIDENCE_DISCIPLINE_RECORDED
+NGOSYSTEM_IMPLEMENTATION_EVIDENCE_LINKS_RECORDED
 NGOSYSTEM_TENANT_REGISTRY_RECORDED
 NGOSYSTEM_PRODUCT_RELEASE_GATES_RECORDED
 NGOSYSTEM_PRODUCTIZATION_ROADMAP_RECORDED
@@ -37,6 +38,7 @@ It records:
 - productization roadmap;
 - product module registry;
 - status discipline;
+- implementation evidence source links;
 - roadmap and governance decisions.
 
 It does not contain runtime implementation code.
@@ -89,6 +91,12 @@ Status and evidence discipline is recorded in:
 
 ```text
 docs/governance/STATUS_AND_EVIDENCE_DISCIPLINE.md
+```
+
+Implementation evidence source links are recorded in:
+
+```text
+docs/governance/IMPLEMENTATION_EVIDENCE_LINKS.md
 ```
 
 The tenant registry is recorded in:

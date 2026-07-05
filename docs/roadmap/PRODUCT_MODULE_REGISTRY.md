@@ -51,6 +51,12 @@ Product name != tenant activation
 This registry may point to implementation repositories and audit packages, but
 it does not supersede their scoped status.
 
+The current product-level evidence source map is recorded in:
+
+```text
+docs/governance/IMPLEMENTATION_EVIDENCE_LINKS.md
+```
+
 If an implementation repository says:
 
 ```text
