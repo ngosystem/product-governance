@@ -12,6 +12,8 @@ const requiredDocs = [
   "docs/governance/PRODUCT_GOVERNANCE_BASELINE.md",
   "docs/governance/GITHUB_OPERATING_MODEL.md",
   "docs/governance/DECISION_LOG.md",
+  "docs/governance/REPOSITORY_MAP.md",
+  "docs/governance/REPOSITORY_CANDIDATE_MAP.md",
   "docs/governance/STATUS_AND_EVIDENCE_DISCIPLINE.md",
   "docs/governance/BRANCH_PROTECTION_REQUIRED_CHECKS_POLICY.md",
   "docs/governance/GITHUB_BRANCH_PROTECTION_RECON_2026-07-06.md",

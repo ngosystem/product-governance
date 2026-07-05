@@ -6,6 +6,7 @@ Status:
 NGOSYSTEM_REPOSITORY_MAP_RECORDED
 REPO_MAP_RECORDED
 PRODUCT_TENANT_REPOSITORY_BOUNDARY_RECORDED
+NGOSYSTEM_REPOSITORY_CANDIDATE_MAP_RECORDED
 NO_REPOSITORY_TRANSFER
 NO_RUNTIME_EFFECT
 NOT_PRODUCTION_READY
@@ -13,6 +14,12 @@ NOT_PRODUCTION_READY
 
 This document records the current repository boundary for ngOSystem. It is a
 governance map, not a repository-transfer decision.
+
+Future repository candidates are recorded separately:
+
+```text
+docs/governance/REPOSITORY_CANDIDATE_MAP.md
+```
 
 ## Current Repository Roles
 
@@ -44,6 +51,9 @@ Future repository moves must be explicit decisions with their own evidence:
 - collaborator and role model;
 - secrets and deployment ownership;
 - public/private visibility changes.
+
+Candidate repository names are not transfer approvals and should not be created
+without their own decision record.
 
 ## Non-Claims
 

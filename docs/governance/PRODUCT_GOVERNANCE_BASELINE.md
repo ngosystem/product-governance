@@ -19,6 +19,7 @@ NGOSYSTEM_REPOSITORY_VISIBILITY_POLICY_RECORDED
 NGOSYSTEM_BRANCH_PROTECTION_REQUIRED_CHECKS_POLICY_RECORDED
 NGOSYSTEM_GITHUB_BRANCH_PROTECTION_RECON_RECORDED
 OPD_006_BRANCH_PROTECTION_CONFIGURATION_OPTIONS_RECORDED
+NGOSYSTEM_REPOSITORY_CANDIDATE_MAP_RECORDED
 NGOSYSTEM_CONTINUOUS_QUALITY_LOOP_RECORDED
 NGOSYSTEM_CRYSTALLINE_SOFTWARE_MINIMALISM_RECORDED
 DEPENDENCY_FREE_GUARD_REPORTED_WIRED
@@ -49,6 +50,7 @@ It records:
 - open productization decision backlog;
 - tenant-template strategy;
 - repository visibility policy;
+- repository candidate map;
 - branch protection and required checks policy;
 - branch protection and required checks recon;
 - branch protection configuration options;
@@ -84,6 +86,12 @@ The current GitHub operating model is recorded in:
 
 ```text
 docs/governance/GITHUB_OPERATING_MODEL.md
+```
+
+The current repository candidate map is recorded in:
+
+```text
+docs/governance/REPOSITORY_CANDIDATE_MAP.md
 ```
 
 Repository-transfer decisions must use:
