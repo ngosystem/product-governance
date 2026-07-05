@@ -9,6 +9,7 @@ NGOSYSTEM_GITHUB_OPERATING_MODEL_RECORDED
 NGOSYSTEM_DECISION_LOG_RECORDED
 NGOSYSTEM_STATUS_EVIDENCE_DISCIPLINE_RECORDED
 NGOSYSTEM_TENANT_REGISTRY_RECORDED
+NGOSYSTEM_PRODUCT_RELEASE_GATES_RECORDED
 NO_CODE_TRANSFER
 NO_RUNTIME_EFFECT
 NOT_PRODUCTION_READY
@@ -30,6 +31,7 @@ It records:
 - GitHub operating model;
 - decision log and decision-record templates;
 - tenant registry and tenant-record template;
+- product release gate model;
 - status discipline;
 - roadmap and governance decisions.
 
@@ -89,6 +91,12 @@ The tenant registry is recorded in:
 
 ```text
 docs/governance/TENANT_REGISTRY.md
+```
+
+Product release gates are recorded in:
+
+```text
+docs/governance/PRODUCT_RELEASE_GATES.md
 ```
 
 Current boundary:
