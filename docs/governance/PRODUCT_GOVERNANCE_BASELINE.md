@@ -56,6 +56,12 @@ The current GitHub operating model is recorded in:
 docs/governance/GITHUB_OPERATING_MODEL.md
 ```
 
+Repository-transfer decisions must use:
+
+```text
+docs/templates/REPOSITORY_TRANSFER_DECISION_TEMPLATE.md
+```
+
 Current boundary:
 
 ```text

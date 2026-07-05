@@ -56,6 +56,7 @@ whole ngOSystem platform.
 - [ngOSystem Product Family](docs/brand/NGOSYSTEM_PRODUCT_FAMILY.md)
 - [Ownership And Tenant Boundary](docs/governance/OWNERSHIP_AND_TENANT_BOUNDARY.md)
 - [ngOSystem Repository Map](docs/governance/REPOSITORY_MAP.md)
+- [Repository Transfer Decision Template](docs/templates/REPOSITORY_TRANSFER_DECISION_TEMPLATE.md)
 
 ## Current Boundary
 

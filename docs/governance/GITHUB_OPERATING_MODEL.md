@@ -52,6 +52,12 @@ decision record with at least:
 - rollback plan;
 - status token and evidence package.
 
+Use the repository transfer template:
+
+```text
+docs/templates/REPOSITORY_TRANSFER_DECISION_TEMPLATE.md
+```
+
 Until that decision exists:
 
 ```text
