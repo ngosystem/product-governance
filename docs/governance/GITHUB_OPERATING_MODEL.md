@@ -4,6 +4,7 @@ Status:
 
 ```text
 NGOSYSTEM_GITHUB_OPERATING_MODEL_RECORDED
+NGOSYSTEM_REPOSITORY_VISIBILITY_POLICY_RECORDED
 ORG_REPOSITORY_CLASSES_RECORDED
 TENANT_REPOSITORY_BOUNDARY_RECORDED
 NO_REPOSITORY_TRANSFER
@@ -120,6 +121,12 @@ Not allowed by this document:
 ## Acceptance Boundary
 
 This operating model is a documentation and governance baseline only.
+
+The current repository visibility policy is recorded in:
+
+```text
+docs/governance/REPOSITORY_VISIBILITY_POLICY.md
+```
 
 ```text
 NO_RUNTIME_EFFECT

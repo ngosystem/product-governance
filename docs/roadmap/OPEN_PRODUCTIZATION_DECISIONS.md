@@ -6,6 +6,7 @@ Status:
 NGOSYSTEM_OPEN_PRODUCTIZATION_DECISIONS_RECORDED
 PRODUCTIZATION_DECISION_BACKLOG_RECORDED
 NGOSYSTEM_TENANT_TEMPLATE_STRATEGY_RECORDED
+NGOSYSTEM_REPOSITORY_VISIBILITY_POLICY_RECORDED
 NO_DECISION_EXECUTED
 NO_REPOSITORY_TRANSFER
 NO_CODE_TRANSFER
@@ -71,6 +72,7 @@ Recommended order:
 | --- | --- | --- |
 | OPD-003 | Tenant frontend strategy reported, not closed. | `docs/roadmap/TENANT_TEMPLATE_STRATEGY.md` |
 | OPD-004 | Tenant-template extraction boundaries reported, no template released. | `docs/roadmap/TENANT_TEMPLATE_STRATEGY.md` |
+| OPD-005 | Repository visibility policy reported, no GitHub setting changed. | `docs/governance/REPOSITORY_VISIBILITY_POLICY.md` |
 
 ## Explicit Non-Decisions
 
