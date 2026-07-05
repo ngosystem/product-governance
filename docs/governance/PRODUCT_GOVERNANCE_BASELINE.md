@@ -14,6 +14,7 @@ NGOSYSTEM_PRODUCT_RELEASE_GATES_RECORDED
 NGOSYSTEM_PRODUCTIZATION_ROADMAP_RECORDED
 NGOSYSTEM_PRODUCT_MODULE_REGISTRY_RECORDED
 NGOSYSTEM_OPEN_PRODUCTIZATION_DECISIONS_RECORDED
+NGOSYSTEM_TENANT_TEMPLATE_STRATEGY_RECORDED
 NO_CODE_TRANSFER
 NO_RUNTIME_EFFECT
 NOT_PRODUCTION_READY
@@ -39,6 +40,7 @@ It records:
 - productization roadmap;
 - product module registry;
 - open productization decision backlog;
+- tenant-template strategy;
 - status discipline;
 - implementation evidence source links;
 - roadmap and governance decisions.
@@ -129,6 +131,12 @@ Open productization decisions are recorded in:
 
 ```text
 docs/roadmap/OPEN_PRODUCTIZATION_DECISIONS.md
+```
+
+The current tenant-template strategy is recorded in:
+
+```text
+docs/roadmap/TENANT_TEMPLATE_STRATEGY.md
 ```
 
 Current boundary:

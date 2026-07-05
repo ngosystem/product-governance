@@ -5,6 +5,7 @@ Status:
 ```text
 NGOSYSTEM_OPEN_PRODUCTIZATION_DECISIONS_RECORDED
 PRODUCTIZATION_DECISION_BACKLOG_RECORDED
+NGOSYSTEM_TENANT_TEMPLATE_STRATEGY_RECORDED
 NO_DECISION_EXECUTED
 NO_REPOSITORY_TRANSFER
 NO_CODE_TRANSFER
@@ -60,9 +61,16 @@ Recommended order:
 
 1. keep evidence hardening in implementation repositories;
 2. close or explicitly carry critical residuals;
-3. define tenant-template strategy;
+3. maintain tenant-template strategy without releasing a template;
 4. decide repository transfer only when it reduces operational risk;
 5. define production-candidate scope only after release gates are linked.
+
+## Progress Notes
+
+| Decision id | Progress | Evidence |
+| --- | --- | --- |
+| OPD-003 | Tenant frontend strategy reported, not closed. | `docs/roadmap/TENANT_TEMPLATE_STRATEGY.md` |
+| OPD-004 | Tenant-template extraction boundaries reported, no template released. | `docs/roadmap/TENANT_TEMPLATE_STRATEGY.md` |
 
 ## Explicit Non-Decisions
 
