@@ -8,6 +8,7 @@ REPO_MAP_RECORDED
 NGOSYSTEM_GITHUB_OPERATING_MODEL_RECORDED
 NGOSYSTEM_DECISION_LOG_RECORDED
 NGOSYSTEM_STATUS_EVIDENCE_DISCIPLINE_RECORDED
+NGOSYSTEM_TENANT_REGISTRY_RECORDED
 NGOSYSTEM_PRODUCT_FAMILY_RECORDED
 NGO_PRODUCT_NAMING_ARCHITECTURE_READY
 RC_SILESIA_FIRST_TENANT_BOUNDARY_RECORDED
@@ -57,11 +58,13 @@ whole ngOSystem platform.
 - [GitHub Operating Model](docs/governance/GITHUB_OPERATING_MODEL.md)
 - [Decision Log](docs/governance/DECISION_LOG.md)
 - [Status And Evidence Discipline](docs/governance/STATUS_AND_EVIDENCE_DISCIPLINE.md)
+- [Tenant Registry](docs/governance/TENANT_REGISTRY.md)
 - [ngOSystem Product Family](docs/brand/NGOSYSTEM_PRODUCT_FAMILY.md)
 - [Ownership And Tenant Boundary](docs/governance/OWNERSHIP_AND_TENANT_BOUNDARY.md)
 - [ngOSystem Repository Map](docs/governance/REPOSITORY_MAP.md)
 - [Product Decision Record Template](docs/templates/PRODUCT_DECISION_RECORD_TEMPLATE.md)
 - [Repository Transfer Decision Template](docs/templates/REPOSITORY_TRANSFER_DECISION_TEMPLATE.md)
+- [Tenant Record Template](docs/templates/TENANT_RECORD_TEMPLATE.md)
 
 ## Current Boundary
 

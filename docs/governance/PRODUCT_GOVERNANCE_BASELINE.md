@@ -8,6 +8,7 @@ REPO_MAP_RECORDED
 NGOSYSTEM_GITHUB_OPERATING_MODEL_RECORDED
 NGOSYSTEM_DECISION_LOG_RECORDED
 NGOSYSTEM_STATUS_EVIDENCE_DISCIPLINE_RECORDED
+NGOSYSTEM_TENANT_REGISTRY_RECORDED
 NO_CODE_TRANSFER
 NO_RUNTIME_EFFECT
 NOT_PRODUCTION_READY
@@ -28,6 +29,7 @@ It records:
 - current repository map;
 - GitHub operating model;
 - decision log and decision-record templates;
+- tenant registry and tenant-record template;
 - status discipline;
 - roadmap and governance decisions.
 
@@ -81,6 +83,12 @@ Status and evidence discipline is recorded in:
 
 ```text
 docs/governance/STATUS_AND_EVIDENCE_DISCIPLINE.md
+```
+
+The tenant registry is recorded in:
+
+```text
+docs/governance/TENANT_REGISTRY.md
 ```
 
 Current boundary:

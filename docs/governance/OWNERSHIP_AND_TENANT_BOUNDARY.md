@@ -5,6 +5,7 @@ Status:
 ```text
 NGOSYSTEM_PRODUCT_OWNERSHIP_BOUNDARY_RECORDED
 RC_SILESIA_FIRST_TENANT_BOUNDARY_RECORDED
+NGOSYSTEM_TENANT_REGISTRY_RECORDED
 NO_REPOSITORY_TRANSFER
 NO_RUNTIME_EFFECT
 NOT_PRODUCTION_READY
@@ -30,6 +31,7 @@ owner of the ngOSystem platform by accident.
 ## Current Repository Roles
 
 See also: [ngOSystem Repository Map](REPOSITORY_MAP.md).
+See also: [ngOSystem Tenant Registry](TENANT_REGISTRY.md).
 
 | Repository area | Role | Current action |
 | --- | --- | --- |
