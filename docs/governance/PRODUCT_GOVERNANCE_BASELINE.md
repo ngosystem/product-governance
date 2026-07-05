@@ -18,6 +18,7 @@ NGOSYSTEM_TENANT_TEMPLATE_STRATEGY_RECORDED
 NGOSYSTEM_REPOSITORY_VISIBILITY_POLICY_RECORDED
 NGOSYSTEM_BRANCH_PROTECTION_REQUIRED_CHECKS_POLICY_RECORDED
 NGOSYSTEM_GITHUB_BRANCH_PROTECTION_RECON_RECORDED
+OPD_006_BRANCH_PROTECTION_CONFIGURATION_OPTIONS_RECORDED
 NGOSYSTEM_CONTINUOUS_QUALITY_LOOP_RECORDED
 NGOSYSTEM_CRYSTALLINE_SOFTWARE_MINIMALISM_RECORDED
 DEPENDENCY_FREE_GUARD_REPORTED_WIRED
@@ -50,6 +51,7 @@ It records:
 - repository visibility policy;
 - branch protection and required checks policy;
 - branch protection and required checks recon;
+- branch protection configuration options;
 - continuous quality loop for product-governance documents;
 - crystalline software minimalism principle;
 - status discipline;
@@ -166,6 +168,12 @@ The first read-only GitHub settings recon is recorded in:
 
 ```text
 docs/governance/GITHUB_BRANCH_PROTECTION_RECON_2026-07-06.md
+```
+
+The current branch protection configuration options are recorded in:
+
+```text
+docs/governance/BRANCH_PROTECTION_CONFIGURATION_OPTIONS.md
 ```
 
 The current product-governance continuous quality loop is recorded in:
