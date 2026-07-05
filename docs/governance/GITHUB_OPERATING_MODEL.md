@@ -1,0 +1,121 @@
+# ngOSystem GitHub Operating Model
+
+Status:
+
+```text
+NGOSYSTEM_GITHUB_OPERATING_MODEL_RECORDED
+ORG_REPOSITORY_CLASSES_RECORDED
+TENANT_REPOSITORY_BOUNDARY_RECORDED
+NO_REPOSITORY_TRANSFER
+NO_CODE_TRANSFER
+NO_RUNTIME_EFFECT
+NOT_PRODUCTION_READY
+```
+
+This document records the GitHub operating model for ngOSystem at the current
+pre-production stage.
+
+It is a governance document. It does not move repositories, change secrets,
+create environments, change branch protection, or activate runtime.
+
+## Organization Roles
+
+| GitHub area | Role | Current boundary |
+| --- | --- | --- |
+| `ngosystem` | Product organization for ngOSystem governance and future product-owned repositories. | Governance anchor now; product runtime repositories only after separate decision. |
+| `RC-Silesia` | Tenant organization for RC Silesia as first tenant and pilot. | Tenant-specific; not owner of the whole ngOSystem platform. |
+| `pawelkojs-dotcom` | Current implementation location for existing backend and development repositories. | Existing code remains where it is until a transfer decision exists. |
+
+## Repository Classes
+
+| Class | Examples | Rule |
+| --- | --- | --- |
+| Product governance | `ngosystem/product-governance` | May contain product decisions, maps, naming, status discipline and roadmap. Must not contain secrets or runtime code. |
+| Product implementation | current `pawelkojs-dotcom/ngos-payments-backend`; future possible `ngosystem/backend` | Runtime code and CI gates. Transfer requires a separate decision and migration checklist. |
+| Universal/product tooling | current `ngOs_UNIVERSAL`; future possible `ngosystem/universal` | Product tooling and cross-module contracts. No mass rename by governance-only decision. |
+| Tenant frontend | `RC-Silesia/WEBSITE` | Tenant implementation surface. Tenant status must not become product-wide production status. |
+| Tenant records | RC Silesia operational/governance repositories | Tenant-specific records. They may consume ngOSystem but do not define product governance. |
+
+## Transfer Gate
+
+Moving any implementation repository under `ngosystem` requires a separate
+decision record with at least:
+
+- source and target repository names;
+- ownership and admin access model;
+- branch protection plan;
+- GitHub Actions and required checks inventory;
+- secrets and environments inventory;
+- deployment ownership;
+- issue/PR migration policy;
+- archival policy for old repository URLs;
+- rollback plan;
+- status token and evidence package.
+
+Until that decision exists:
+
+```text
+NO_REPOSITORY_TRANSFER
+NO_CODE_TRANSFER
+```
+
+## Branch Protection And CI
+
+Branch protection is a repository-level operational control, not a product
+readiness claim.
+
+For runtime repositories, future protection should prefer:
+
+- pull request review or explicit owner approval;
+- required CI checks for governance and runtime-critical paths;
+- no direct production secret exposure in logs;
+- separate environments for staging and production;
+- audit trail for production deployment decisions.
+
+For `product-governance`, lightweight direct commits are acceptable while the
+repository contains governance documents only. If it starts carrying binding
+release policy, pricing, legal, or security policy, a stricter PR policy should
+be added as a separate decision.
+
+## Status Discipline
+
+GitHub repository existence does not imply product readiness.
+
+The following claims remain forbidden unless separately evidenced:
+
+```text
+NGOSYSTEM_PRODUCTION_READY
+NGOSYSTEM_RUNTIME_LIVE
+NGOSYSTEM_LEGAL_READY
+NGOSYSTEM_REPOSITORY_TRANSFER_COMPLETE
+TENANT_PRODUCTION_READY
+RC_SILESIA_PRODUCT_OWNER
+```
+
+## Current Allowed Actions
+
+Allowed now:
+
+- record product governance;
+- record repository map;
+- record ownership and tenant boundary;
+- record future transfer criteria;
+- keep existing code repositories unchanged.
+
+Not allowed by this document:
+
+- move backend code;
+- move tenant frontend code;
+- rename packages or repositories;
+- change deployment environments;
+- copy or expose secrets;
+- claim production readiness.
+
+## Acceptance Boundary
+
+This operating model is a documentation and governance baseline only.
+
+```text
+NO_RUNTIME_EFFECT
+NOT_PRODUCTION_READY
+```

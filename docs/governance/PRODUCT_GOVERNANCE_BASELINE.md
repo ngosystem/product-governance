@@ -5,6 +5,7 @@ Status:
 ```text
 NGOSYSTEM_PRODUCT_GOVERNANCE_REPO_INITIALIZED
 REPO_MAP_RECORDED
+NGOSYSTEM_GITHUB_OPERATING_MODEL_RECORDED
 NO_CODE_TRANSFER
 NO_RUNTIME_EFFECT
 NOT_PRODUCTION_READY
@@ -23,6 +24,7 @@ It records:
 - product naming architecture;
 - product ownership and tenant boundary;
 - current repository map;
+- GitHub operating model;
 - status discipline;
 - roadmap and governance decisions.
 
@@ -46,6 +48,12 @@ The current repository map is recorded in:
 
 ```text
 docs/governance/REPOSITORY_MAP.md
+```
+
+The current GitHub operating model is recorded in:
+
+```text
+docs/governance/GITHUB_OPERATING_MODEL.md
 ```
 
 Current boundary:
