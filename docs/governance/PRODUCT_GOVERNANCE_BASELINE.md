@@ -6,6 +6,7 @@ Status:
 NGOSYSTEM_PRODUCT_GOVERNANCE_REPO_INITIALIZED
 REPO_MAP_RECORDED
 NGOSYSTEM_GITHUB_OPERATING_MODEL_RECORDED
+NGOSYSTEM_DECISION_LOG_RECORDED
 NO_CODE_TRANSFER
 NO_RUNTIME_EFFECT
 NOT_PRODUCTION_READY
@@ -25,6 +26,7 @@ It records:
 - product ownership and tenant boundary;
 - current repository map;
 - GitHub operating model;
+- decision log and decision-record templates;
 - status discipline;
 - roadmap and governance decisions.
 
@@ -60,6 +62,18 @@ Repository-transfer decisions must use:
 
 ```text
 docs/templates/REPOSITORY_TRANSFER_DECISION_TEMPLATE.md
+```
+
+Product-governance decisions should be recorded in:
+
+```text
+docs/governance/DECISION_LOG.md
+```
+
+New product decisions should use:
+
+```text
+docs/templates/PRODUCT_DECISION_RECORD_TEMPLATE.md
 ```
 
 Current boundary:
