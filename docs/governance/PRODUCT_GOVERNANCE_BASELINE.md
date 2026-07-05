@@ -10,6 +10,7 @@ NGOSYSTEM_DECISION_LOG_RECORDED
 NGOSYSTEM_STATUS_EVIDENCE_DISCIPLINE_RECORDED
 NGOSYSTEM_TENANT_REGISTRY_RECORDED
 NGOSYSTEM_PRODUCT_RELEASE_GATES_RECORDED
+NGOSYSTEM_PRODUCTIZATION_ROADMAP_RECORDED
 NO_CODE_TRANSFER
 NO_RUNTIME_EFFECT
 NOT_PRODUCTION_READY
@@ -32,6 +33,7 @@ It records:
 - decision log and decision-record templates;
 - tenant registry and tenant-record template;
 - product release gate model;
+- productization roadmap;
 - status discipline;
 - roadmap and governance decisions.
 
@@ -97,6 +99,12 @@ Product release gates are recorded in:
 
 ```text
 docs/governance/PRODUCT_RELEASE_GATES.md
+```
+
+The productization roadmap is recorded in:
+
+```text
+docs/roadmap/PRODUCTIZATION_ROADMAP.md
 ```
 
 Current boundary:
