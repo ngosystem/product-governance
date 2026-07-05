@@ -17,6 +17,7 @@ NGOSYSTEM_OPEN_PRODUCTIZATION_DECISIONS_RECORDED
 NGOSYSTEM_TENANT_TEMPLATE_STRATEGY_RECORDED
 NGOSYSTEM_REPOSITORY_VISIBILITY_POLICY_RECORDED
 NGOSYSTEM_BRANCH_PROTECTION_REQUIRED_CHECKS_POLICY_RECORDED
+NGOSYSTEM_GITHUB_BRANCH_PROTECTION_RECON_RECORDED
 NO_CODE_TRANSFER
 NO_RUNTIME_EFFECT
 NOT_PRODUCTION_READY
@@ -45,6 +46,7 @@ It records:
 - tenant-template strategy;
 - repository visibility policy;
 - branch protection and required checks policy;
+- branch protection and required checks recon;
 - status discipline;
 - implementation evidence source links;
 - roadmap and governance decisions.
@@ -153,6 +155,12 @@ The branch protection and required checks policy is recorded in:
 
 ```text
 docs/governance/BRANCH_PROTECTION_REQUIRED_CHECKS_POLICY.md
+```
+
+The first read-only GitHub settings recon is recorded in:
+
+```text
+docs/governance/GITHUB_BRANCH_PROTECTION_RECON_2026-07-06.md
 ```
 
 Current boundary:
