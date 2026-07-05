@@ -29,6 +29,8 @@ owner of the ngOSystem platform by accident.
 
 ## Current Repository Roles
 
+See also: [ngOSystem Repository Map](REPOSITORY_MAP.md).
+
 | Repository area | Role | Current action |
 | --- | --- | --- |
 | `ngosystem/product-governance` | product governance, naming architecture, roadmap, evidence discipline | initialized as public governance anchor |
