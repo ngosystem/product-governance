@@ -9,6 +9,7 @@ NGOSYSTEM_TENANT_TEMPLATE_STRATEGY_RECORDED
 NGOSYSTEM_REPOSITORY_VISIBILITY_POLICY_RECORDED
 NGOSYSTEM_BRANCH_PROTECTION_REQUIRED_CHECKS_POLICY_RECORDED
 NGOSYSTEM_GITHUB_BRANCH_PROTECTION_RECON_RECORDED
+NGOSYSTEM_CONTINUOUS_QUALITY_LOOP_RECORDED
 NO_DECISION_EXECUTED
 NO_REPOSITORY_TRANSFER
 NO_CODE_TRANSFER
@@ -77,6 +78,7 @@ Recommended order:
 | OPD-005 | Repository visibility policy reported, no GitHub setting changed. | `docs/governance/REPOSITORY_VISIBILITY_POLICY.md` |
 | OPD-006 | Branch protection and required checks policy reported, no GitHub setting changed. | `docs/governance/BRANCH_PROTECTION_REQUIRED_CHECKS_POLICY.md` |
 | OPD-006 | Read-only GitHub settings recon recorded: product-governance and WEBSITE unprotected; backend protection/rulesets feature-gated while private on current plan; no setting changed. | `docs/governance/GITHUB_BRANCH_PROTECTION_RECON_2026-07-06.md` |
+| OPD-006 | Product-governance quality workflow reported wired, but not configured as a required check. | `docs/governance/CONTINUOUS_QUALITY_LOOP.md` |
 
 ## Explicit Non-Decisions
 

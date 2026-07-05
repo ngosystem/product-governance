@@ -83,6 +83,15 @@ gh run list -R ngosystem/product-governance
 []
 ```
 
+Historical note:
+
+```text
+This was the observed state at recon time. A later governance-only change
+introduced a lightweight product-governance quality workflow recorded in
+docs/governance/CONTINUOUS_QUALITY_LOOP.md. This recon remains evidence of the
+pre-workflow state and does not claim required-check enforcement.
+```
+
 Interpretation:
 
 ```text

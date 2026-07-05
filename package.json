@@ -1,0 +1,9 @@
+{
+  "name": "ngosystem-product-governance",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "npm run check:quality-loop",
+    "check:quality-loop": "node scripts/product-governance-quality-check.mjs"
+  }
+}

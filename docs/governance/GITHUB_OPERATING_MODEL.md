@@ -7,6 +7,7 @@ NGOSYSTEM_GITHUB_OPERATING_MODEL_RECORDED
 NGOSYSTEM_REPOSITORY_VISIBILITY_POLICY_RECORDED
 NGOSYSTEM_BRANCH_PROTECTION_REQUIRED_CHECKS_POLICY_RECORDED
 NGOSYSTEM_GITHUB_BRANCH_PROTECTION_RECON_RECORDED
+NGOSYSTEM_CONTINUOUS_QUALITY_LOOP_RECORDED
 ORG_REPOSITORY_CLASSES_RECORDED
 TENANT_REPOSITORY_BOUNDARY_RECORDED
 NO_REPOSITORY_TRANSFER
@@ -107,6 +108,15 @@ repository contains governance documents only. If it starts carrying binding
 release policy, pricing, legal, or security policy, a stricter PR policy should
 be added as a separate decision.
 
+The product-governance repository now has a lightweight quality workflow:
+
+```text
+docs/governance/CONTINUOUS_QUALITY_LOOP.md
+```
+
+This reports quality-loop wiring only. It does not make the workflow a required
+check.
+
 ## Status Discipline
 
 GitHub repository existence does not imply product readiness.
@@ -154,6 +164,7 @@ docs/governance/REPOSITORY_VISIBILITY_POLICY.md
 ```text
 NGOSYSTEM_BRANCH_PROTECTION_REQUIRED_CHECKS_POLICY_RECORDED
 NGOSYSTEM_GITHUB_BRANCH_PROTECTION_RECON_RECORDED
+NGOSYSTEM_CONTINUOUS_QUALITY_LOOP_RECORDED
 NO_BRANCH_PROTECTION_CHANGE
 NO_REQUIRED_CHECKS_CONFIGURATION_CHANGE
 NO_RUNTIME_EFFECT

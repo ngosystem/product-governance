@@ -18,6 +18,7 @@ NGOSYSTEM_TENANT_TEMPLATE_STRATEGY_RECORDED
 NGOSYSTEM_REPOSITORY_VISIBILITY_POLICY_RECORDED
 NGOSYSTEM_BRANCH_PROTECTION_REQUIRED_CHECKS_POLICY_RECORDED
 NGOSYSTEM_GITHUB_BRANCH_PROTECTION_RECON_RECORDED
+NGOSYSTEM_CONTINUOUS_QUALITY_LOOP_RECORDED
 NGOSYSTEM_PRODUCT_FAMILY_RECORDED
 NGO_PRODUCT_NAMING_ARCHITECTURE_READY
 RC_SILESIA_FIRST_TENANT_BOUNDARY_RECORDED
@@ -77,12 +78,27 @@ whole ngOSystem platform.
 - [Repository Visibility Policy](docs/governance/REPOSITORY_VISIBILITY_POLICY.md)
 - [Branch Protection And Required Checks Policy](docs/governance/BRANCH_PROTECTION_REQUIRED_CHECKS_POLICY.md)
 - [GitHub Branch Protection Recon 2026-07-06](docs/governance/GITHUB_BRANCH_PROTECTION_RECON_2026-07-06.md)
+- [Continuous Quality Loop](docs/governance/CONTINUOUS_QUALITY_LOOP.md)
 - [ngOSystem Product Family](docs/brand/NGOSYSTEM_PRODUCT_FAMILY.md)
 - [Ownership And Tenant Boundary](docs/governance/OWNERSHIP_AND_TENANT_BOUNDARY.md)
 - [ngOSystem Repository Map](docs/governance/REPOSITORY_MAP.md)
 - [Product Decision Record Template](docs/templates/PRODUCT_DECISION_RECORD_TEMPLATE.md)
 - [Repository Transfer Decision Template](docs/templates/REPOSITORY_TRANSFER_DECISION_TEMPLATE.md)
 - [Tenant Record Template](docs/templates/TENANT_RECORD_TEMPLATE.md)
+
+## Quality Check
+
+```text
+npm run check
+```
+
+Current quality-loop scope:
+
+```text
+PRODUCT_GOVERNANCE_QUALITY_CHECK_REPORTED_WIRED
+QUALITY_LOOP_CI_WORKFLOW_REPORTED_WIRED
+NO_REQUIRED_CHECKS_CONFIGURATION_CHANGE
+```
 
 ## Current Boundary
 
