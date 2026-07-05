@@ -11,6 +11,7 @@ NGOSYSTEM_STATUS_EVIDENCE_DISCIPLINE_RECORDED
 NGOSYSTEM_TENANT_REGISTRY_RECORDED
 NGOSYSTEM_PRODUCT_RELEASE_GATES_RECORDED
 NGOSYSTEM_PRODUCTIZATION_ROADMAP_RECORDED
+NGOSYSTEM_PRODUCT_MODULE_REGISTRY_RECORDED
 NO_CODE_TRANSFER
 NO_RUNTIME_EFFECT
 NOT_PRODUCTION_READY
@@ -34,6 +35,7 @@ It records:
 - tenant registry and tenant-record template;
 - product release gate model;
 - productization roadmap;
+- product module registry;
 - status discipline;
 - roadmap and governance decisions.
 
@@ -105,6 +107,12 @@ The productization roadmap is recorded in:
 
 ```text
 docs/roadmap/PRODUCTIZATION_ROADMAP.md
+```
+
+The product module registry is recorded in:
+
+```text
+docs/roadmap/PRODUCT_MODULE_REGISTRY.md
 ```
 
 Current boundary:

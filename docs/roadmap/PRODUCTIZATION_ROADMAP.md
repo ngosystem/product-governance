@@ -4,6 +4,7 @@ Status:
 
 ```text
 NGOSYSTEM_PRODUCTIZATION_ROADMAP_RECORDED
+NGOSYSTEM_PRODUCT_MODULE_REGISTRY_RECORDED
 PHASED_PRODUCTIZATION_PATH_RECORDED
 NO_REPOSITORY_TRANSFER
 NO_RUNTIME_EFFECT
@@ -69,6 +70,7 @@ Already recorded in this repository:
 - status and evidence discipline;
 - tenant registry;
 - release gates.
+- product module registry.
 
 P0 does not create runtime.
 
@@ -140,6 +142,12 @@ Product packaging should clarify:
 - compliance baseline.
 
 Packaging is not production activation.
+
+The current product-module registry is recorded in:
+
+```text
+docs/roadmap/PRODUCT_MODULE_REGISTRY.md
+```
 
 ## Phase P5 - Production Candidate
 

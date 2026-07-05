@@ -33,6 +33,12 @@ OS = Operating System
 This gives the product family a graphic and semantic center while preserving the
 `ngO` root.
 
+The current product-module mapping is recorded in:
+
+```text
+docs/roadmap/PRODUCT_MODULE_REGISTRY.md
+```
+
 ## Product Relationship
 
 ```text
