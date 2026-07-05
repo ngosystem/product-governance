@@ -36,6 +36,14 @@ const forbiddenStatusTokens = new Set([
 
 const allowedExtensions = new Set([".md", ".json", ".mjs", ".yml", ".yaml"]);
 const maxFileBytes = 250_000;
+const forbiddenFiles = new Set(["package-lock.json"]);
+const dependencyFields = [
+  "dependencies",
+  "devDependencies",
+  "optionalDependencies",
+  "peerDependencies",
+  "bundledDependencies"
+];
 
 function normalizePath(filePath) {
   return filePath.split(path.sep).join("/");
@@ -133,6 +141,26 @@ function checkReadmeLinks(readmeText) {
   }
 }
 
+function checkPackageManifest() {
+  const packagePath = path.join(root, "package.json");
+  const packageJson = JSON.parse(readFileSync(packagePath, "utf8"));
+  assert(packageJson.private === true, "package.json: product-governance package must remain private");
+  assert(packageJson.type === "module", "package.json: checker runtime must remain ESM");
+
+  for (const field of dependencyFields) {
+    const value = packageJson[field];
+    const count = value && typeof value === "object" ? Object.keys(value).length : 0;
+    assert(count === 0, `package.json: ${field} must stay empty unless a decision records why`);
+  }
+
+  const scripts = packageJson.scripts ?? {};
+  assert(scripts.check === "npm run check:quality-loop", "package.json: check script drifted");
+  assert(
+    scripts["check:quality-loop"] === "node scripts/product-governance-quality-check.mjs",
+    "package.json: quality-loop script drifted"
+  );
+}
+
 const files = await walk(root);
 const trackedLikeFiles = files.filter((filePath) => {
   const rel = normalizePath(path.relative(root, filePath));
@@ -146,6 +174,7 @@ for (const requiredDoc of requiredDocs) {
 for (const filePath of trackedLikeFiles) {
   const rel = normalizePath(path.relative(root, filePath));
   const ext = path.extname(filePath);
+  assert(!forbiddenFiles.has(rel), `${rel}: generated dependency artifact is not allowed`);
   assert(allowedExtensions.has(ext), `${rel}: unexpected file extension for product-governance repository`);
 
   const size = statSync(filePath).size;
@@ -160,6 +189,7 @@ for (const filePath of trackedLikeFiles) {
 
 const readmeText = readFileSync(path.join(root, "README.md"), "utf8");
 checkReadmeLinks(readmeText);
+checkPackageManifest();
 
 console.log("PRODUCT_GOVERNANCE_QUALITY_LOOP_CHECK");
 console.log(`result=${failures.length === 0 ? "PASS" : "FAIL"}`);

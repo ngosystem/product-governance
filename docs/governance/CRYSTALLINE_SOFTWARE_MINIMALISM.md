@@ -136,6 +136,12 @@ scripts/product-governance-quality-check.mjs
 
 It uses no runtime dependencies and checks only governance-specific invariants.
 
+The quality checker also enforces the current dependency boundary:
+
+```text
+DEPENDENCY_FREE_GUARD_REPORTED_WIRED
+```
+
 That shape is intentional and should be preserved until a concrete failure mode
 justifies more machinery.
 

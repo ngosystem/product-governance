@@ -7,6 +7,7 @@ NGOSYSTEM_CONTINUOUS_QUALITY_LOOP_RECORDED
 PRODUCT_GOVERNANCE_QUALITY_CHECK_REPORTED_WIRED
 QUALITY_LOOP_CI_WORKFLOW_REPORTED_WIRED
 NGOSYSTEM_CRYSTALLINE_SOFTWARE_MINIMALISM_RECORDED
+DEPENDENCY_FREE_GUARD_REPORTED_WIRED
 NO_BRANCH_PROTECTION_CHANGE
 NO_REQUIRED_CHECKS_CONFIGURATION_CHANGE
 NO_RUNTIME_EFFECT
@@ -88,6 +89,10 @@ It checks:
 - repository files use expected text-oriented extensions;
 - files remain below a lightweight size threshold;
 - `README.md` links the required governance documents.
+- `package.json` remains private, dependency-free and limited to the quality
+  loop scripts;
+- `package-lock.json` is absent unless a separate dependency decision changes
+  this boundary.
 
 ## Security Boundary
 
@@ -135,6 +140,18 @@ NO_REQUIRED_CHECKS_CONFIGURATION_CHANGE
 Required-check enforcement is still governed by OPD-006 and requires separate
 GitHub settings evidence.
 
+## Dependency-Free Guard
+
+The quality checker enforces the current dependency boundary:
+
+```text
+DEPENDENCY_FREE_GUARD_REPORTED_WIRED
+```
+
+The guard fails if npm dependency fields become populated or a generated
+`package-lock.json` appears without a separate decision. This keeps
+`DEPENDENCY_LAST_RESORT` mechanical instead of purely aspirational.
+
 ## Residuals
 
 | Residual | Status | Trigger to close |
@@ -163,6 +180,7 @@ PUBLIC_SAAS_LAUNCHED
 NGOSYSTEM_CONTINUOUS_QUALITY_LOOP_RECORDED
 PRODUCT_GOVERNANCE_QUALITY_CHECK_REPORTED_WIRED
 QUALITY_LOOP_CI_WORKFLOW_REPORTED_WIRED
+DEPENDENCY_FREE_GUARD_REPORTED_WIRED
 NO_BRANCH_PROTECTION_CHANGE
 NO_REQUIRED_CHECKS_CONFIGURATION_CHANGE
 NO_RUNTIME_EFFECT
