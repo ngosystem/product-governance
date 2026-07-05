@@ -1,2 +1,61 @@
-# product-governance
-ngOSystem product governance, naming architecture, roadmap, and evidence discipline.
+# ngOSystem Product Governance
+
+Status:
+
+```text
+NGOSYSTEM_PRODUCT_GOVERNANCE_REPO_INITIALIZED
+NGOSYSTEM_PRODUCT_FAMILY_RECORDED
+NGO_PRODUCT_NAMING_ARCHITECTURE_READY
+RC_SILESIA_FIRST_TENANT_BOUNDARY_RECORDED
+NO_CODE_TRANSFER
+NO_MASS_RENAME
+NO_RUNTIME_EFFECT
+NOT_PRODUCTION_READY
+```
+
+This repository records product governance for **ngOSystem**: naming
+architecture, product-family boundaries, roadmap decisions, tenant separation
+and evidence discipline.
+
+It is intentionally not a runtime repository.
+
+## Ownership Boundary
+
+```text
+Product owner / IP decision owner: Pawel Kojs
+Product umbrella: ngOSystem
+Technical shorthand: ngOSys
+First tenant / pilot: RC Silesia
+```
+
+RC Silesia is the first tenant and reference pilot. It is not the owner of the
+whole ngOSystem platform.
+
+## What This Repository Is
+
+- product governance;
+- product-family naming architecture;
+- status and evidence discipline;
+- roadmap and decision records;
+- public anchor for ngOSystem as an independent product.
+
+## What This Repository Is Not
+
+- not the backend;
+- not the RC Silesia frontend;
+- not a production deployment;
+- not a legal, RODO, WCAG, BIP, e-Doreczenia or Login.gov.pl readiness claim;
+- not a mass rename of existing repositories or packages.
+
+## Initial Documents
+
+- [ngOSystem Product Family](docs/brand/NGOSYSTEM_PRODUCT_FAMILY.md)
+- [Ownership And Tenant Boundary](docs/governance/OWNERSHIP_AND_TENANT_BOUNDARY.md)
+
+## Current Boundary
+
+```text
+NO_CODE_TRANSFER
+NO_RUNTIME_EFFECT
+NOT_PRODUCTION_READY
+```
