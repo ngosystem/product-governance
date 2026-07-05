@@ -5,6 +5,7 @@ Status:
 ```text
 NGOSYSTEM_DECISION_LOG_RECORDED
 PRODUCT_DECISION_PROTOCOL_RECORDED
+NGOSYSTEM_STATUS_EVIDENCE_DISCIPLINE_RECORDED
 NO_RUNTIME_EFFECT
 NOT_PRODUCTION_READY
 ```
@@ -46,6 +47,7 @@ or implement a decision, but the decision itself must be explicit.
 | D-0004 | Product governance repository baseline | NGOSYSTEM_PRODUCT_GOVERNANCE_REPO_INITIALIZED / NO_RUNTIME_EFFECT / NOT_PRODUCTION_READY | `docs/governance/PRODUCT_GOVERNANCE_BASELINE.md` |
 | D-0005 | GitHub operating model for product and tenant repositories | NGOSYSTEM_GITHUB_OPERATING_MODEL_RECORDED / NO_REPOSITORY_TRANSFER / NOT_PRODUCTION_READY | `docs/governance/GITHUB_OPERATING_MODEL.md` |
 | D-0006 | Repository transfer decision template | REPOSITORY_TRANSFER_DECISION_TEMPLATE_RECORDED / NO_REPOSITORY_TRANSFER / NOT_PRODUCTION_READY | `docs/templates/REPOSITORY_TRANSFER_DECISION_TEMPLATE.md` |
+| D-0007 | Status and evidence discipline | NGOSYSTEM_STATUS_EVIDENCE_DISCIPLINE_RECORDED / AUDIT_VALID_WRITER_BOUNDARY_RECORDED / NOT_PRODUCTION_READY | `docs/governance/STATUS_AND_EVIDENCE_DISCIPLINE.md` |
 
 ## Required Form For New Decisions
 
@@ -74,6 +76,12 @@ Do not treat any of the following as a decision by itself:
 - a tenant milestone used as a product-wide milestone.
 
 ## Status Discipline
+
+See also:
+
+```text
+docs/governance/STATUS_AND_EVIDENCE_DISCIPLINE.md
+```
 
 Decision records must preserve the boundary between:
 
