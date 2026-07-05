@@ -228,6 +228,38 @@ Trigger to revisit:
 
 This matrix is preparatory. It is not the final owner decision.
 
+## Owner Decision Checklist
+
+When OPD-006 is ready for an owner decision, answer these questions in one
+decision record. Do not answer them by creating settings ad hoc in GitHub.
+
+| Area | Minimum owner answer | Evidence needed after action |
+| --- | --- | --- |
+| `ngosystem/product-governance` | Keep direct owner commits for docs-only work, or require PR plus `Product governance quality`. | Screenshot or API output showing protection/ruleset state, or explicit defer-with-residual record. |
+| `pawelkojs-dotcom/ngos-payments-backend` | Keep private and accept current feature-gated protection residual, change plan, or change visibility. | API output for protection/rulesets plus current required check names, or explicit defer-with-residual record. |
+| `RC-Silesia/WEBSITE` | Keep Pages-only deployment for now, or add required staging/accessibility/content checks before production-like changes. | API output for protection/rulesets plus current required check names, or explicit defer-with-residual record. |
+
+The decision record should include:
+
+- chosen option per repository;
+- reason for each chosen option;
+- residuals accepted by the owner;
+- trigger that reopens the decision;
+- exact required check names if any setting is configured;
+- evidence path or GitHub URL for the settings state.
+
+If no GitHub setting is changed, OPD-006 may still be narrowed, but only with a
+clear residual:
+
+```text
+BRANCH_PROTECTION_DEFERRED_WITH_OWNER_RESIDUAL
+NO_BRANCH_PROTECTION_CHANGE
+NO_REQUIRED_CHECKS_CONFIGURATION_CHANGE
+```
+
+If GitHub settings are changed, record the concrete result instead. Do not use a
+generic success token.
+
 ## What Would Close OPD-006
 
 OPD-006 can close only after an explicit owner decision records one of these:

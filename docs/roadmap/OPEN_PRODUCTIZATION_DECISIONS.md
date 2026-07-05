@@ -82,6 +82,7 @@ Recommended order:
 | OPD-006 | Read-only GitHub settings recon recorded: product-governance and WEBSITE unprotected; backend protection/rulesets feature-gated while private on current plan; no setting changed. | `docs/governance/GITHUB_BRANCH_PROTECTION_RECON_2026-07-06.md` |
 | OPD-006 | Product-governance quality workflow reported wired, but not configured as a required check. | `docs/governance/CONTINUOUS_QUALITY_LOOP.md` |
 | OPD-006 | Branch protection configuration options recorded; owner decision still pending; no GitHub setting changed. | `docs/governance/BRANCH_PROTECTION_CONFIGURATION_OPTIONS.md` |
+| OPD-006 | Owner decision checklist recorded; it narrows the next GitHub action but does not close OPD-006. | `docs/governance/BRANCH_PROTECTION_CONFIGURATION_OPTIONS.md` |
 | OPD-001/002/003/004/012 | Future repository candidates recorded as options, not approvals. | `docs/governance/REPOSITORY_CANDIDATE_MAP.md` |
 
 ## Explicit Non-Decisions
