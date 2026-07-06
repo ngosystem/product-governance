@@ -18,6 +18,7 @@ const requiredDocs = [
   "docs/governance/BRANCH_PROTECTION_REQUIRED_CHECKS_POLICY.md",
   "docs/governance/GITHUB_BRANCH_PROTECTION_RECON_2026-07-06.md",
   "docs/governance/BRANCH_PROTECTION_CONFIGURATION_OPTIONS.md",
+  "docs/governance/GITHUB_BRANCH_PROTECTION_EVIDENCE_2026-07-06.md",
   "docs/governance/EU_FORGE_ALTERNATIVES_RECON.md",
   "docs/governance/CONTINUOUS_QUALITY_LOOP.md",
   "docs/governance/CRYSTALLINE_SOFTWARE_MINIMALISM.md",
@@ -55,7 +56,7 @@ const requiredDecisionLogSections = [
   "## Acceptance Boundary"
 ];
 const requiredDecisionIds = Array.from(
-  { length: 24 },
+  { length: 25 },
   (_, index) => `D-${String(index + 1).padStart(4, "0")}`
 );
 const requiredOperatingModelInvariants = [
@@ -67,6 +68,13 @@ const requiredOperatingModelInvariants = [
   "It must not happen through concurrent writes",
   "git status --short --branch",
   "MULTI_AGENT_WORKTREE_ISOLATION_RECORDED"
+];
+const requiredProductGovernanceProtectionInvariants = [
+  "OPD_006_PRODUCT_GOVERNANCE_BRANCH_PROTECTION_DECISION_RECORDED",
+  "PRODUCT_GOVERNANCE_PR_GATE_SELECTED",
+  "PRODUCT_GOVERNANCE_REQUIRED_CHECK_CONTEXT_RECORDED",
+  "product-governance-quality",
+  "BACKEND_AND_TENANT_BRANCH_PROTECTION_REMAIN_DEFERRED"
 ];
 
 function normalizePath(filePath) {
@@ -219,6 +227,15 @@ function checkOperatingModelIntegrity(text) {
   }
 }
 
+function checkProductGovernanceProtectionIntegrity(text) {
+  for (const invariant of requiredProductGovernanceProtectionInvariants) {
+    assert(
+      text.includes(invariant),
+      `docs/governance/BRANCH_PROTECTION_CONFIGURATION_OPTIONS.md: required OPD-006 product-governance invariant missing: ${invariant}`
+    );
+  }
+}
+
 const files = await walk(root);
 const trackedLikeFiles = files.filter((filePath) => {
   const rel = normalizePath(path.relative(root, filePath));
@@ -248,9 +265,11 @@ for (const filePath of trackedLikeFiles) {
 const readmeText = readFileSync(path.join(root, "README.md"), "utf8");
 const decisionLogText = readFileSync(path.join(root, "docs/governance/DECISION_LOG.md"), "utf8");
 const operatingModelText = readFileSync(path.join(root, "docs/governance/GITHUB_OPERATING_MODEL.md"), "utf8");
+const branchProtectionOptionsText = readFileSync(path.join(root, "docs/governance/BRANCH_PROTECTION_CONFIGURATION_OPTIONS.md"), "utf8");
 checkReadmeLinks(readmeText);
 checkDecisionLogIntegrity(decisionLogText);
 checkOperatingModelIntegrity(operatingModelText);
+checkProductGovernanceProtectionIntegrity(branchProtectionOptionsText);
 checkPackageManifest();
 
 console.log("PRODUCT_GOVERNANCE_QUALITY_LOOP_CHECK");

@@ -5,24 +5,28 @@ Status:
 ```text
 OPD_006_BRANCH_PROTECTION_CONFIGURATION_OPTIONS_RECORDED
 OPD_006_OWNER_DECISION_GITHUB_FREE_FOR_NOW_RECORDED
-BRANCH_PROTECTION_DEFERRED_WITH_OWNER_RESIDUAL
+OPD_006_PRODUCT_GOVERNANCE_BRANCH_PROTECTION_DECISION_RECORDED
+PRODUCT_GOVERNANCE_PR_GATE_SELECTED
+PRODUCT_GOVERNANCE_REQUIRED_CHECK_CONTEXT_RECORDED
 GITHUB_FREE_CURRENT_PLAN_ACCEPTED_FOR_NOW
 BACKEND_PRIVATE_BRANCH_PROTECTION_FEATURE_GATED_RESIDUAL_ACCEPTED
-NO_BRANCH_PROTECTION_CHANGE
-NO_REQUIRED_CHECKS_CONFIGURATION_CHANGE
+BACKEND_AND_TENANT_BRANCH_PROTECTION_REMAIN_DEFERRED
+NO_PAID_GITHUB_PLAN_CHANGE
 NO_REPOSITORY_TRANSFER
 NO_CODE_TRANSFER
 NO_RUNTIME_EFFECT
 NOT_PRODUCTION_READY
 ```
 
-This document records owner-decision options after the branch protection policy
-the read-only GitHub settings recon, and the owner's current decision to keep
-ngOSystem on GitHub Free for now.
+This document records owner-decision options after the branch protection policy,
+the read-only GitHub settings recon, the owner's decision to keep ngOSystem on
+GitHub Free for now, and the later owner amendment for `product-governance`.
 
-It records a decision to defer branch-protection enforcement with explicit
-residuals. It does not configure GitHub branch protection, rulesets, required
-checks, environments, repository transfers or repository visibility.
+It records a decision to add a pull-request gate and the existing
+`product-governance-quality` context for `ngosystem/product-governance`.
+Backend and tenant frontend branch-protection enforcement remain deferred with
+explicit residuals. This document does not create environments, transfer
+repositories, change repository visibility, or make production-readiness claims.
 
 ## Source Evidence
 
@@ -31,13 +35,14 @@ This document depends on:
 ```text
 docs/governance/BRANCH_PROTECTION_REQUIRED_CHECKS_POLICY.md
 docs/governance/GITHUB_BRANCH_PROTECTION_RECON_2026-07-06.md
+docs/governance/GITHUB_BRANCH_PROTECTION_EVIDENCE_2026-07-06.md
 ```
 
 Current facts from the recon:
 
 | Repository | Observed state | Decision issue |
 | --- | --- | --- |
-| `ngosystem/product-governance` | Public, `main` unprotected, rulesets empty, product-governance quality workflow now exists after the recon. | Decide whether documentation-only direct commits remain acceptable. |
+| `ngosystem/product-governance` | Public; recon originally found `main` unprotected and rulesets empty; D-0025 later added PR/check protection evidence. | Product-governance part resolved by owner amendment; backend and tenant residuals remain. |
 | `pawelkojs-dotcom/ngos-payments-backend` | Private, branch protection/rulesets feature-gated by GitHub plan/visibility, workflows observed on push/PR. | Decide whether privacy, plan change or visibility change is the right tradeoff. |
 | `RC-Silesia/WEBSITE` | Public, `main` unprotected, rulesets empty, Pages deployment workflow present. | Decide when tenant frontend checks must become protected. |
 
@@ -226,7 +231,7 @@ Trigger to revisit:
 
 | Decision area | Lowest-risk current choice | Why |
 | --- | --- | --- |
-| Product governance | Option A | Docs-only repository, no secrets, lightweight quality workflow already exists. |
+| Product governance | Option A originally; D-0025 amendment selects PR gate plus `product-governance-quality` | Docs-only repository, no secrets, lightweight quality workflow exists and can now guard PRs. |
 | Backend | Option B now; Option C before production candidate | Privacy remains useful, but required checks enforcement is strategically desirable before production. |
 | Tenant frontend | Option E now; stronger checks before production candidate | Pages deployment exists, but not enough for production readiness. |
 
@@ -247,7 +252,7 @@ Repository-specific outcome:
 
 | Repository | Owner decision | Residual |
 | --- | --- | --- |
-| `ngosystem/product-governance` | Keep direct owner commits acceptable while the repository remains docs-only governance. | `Product governance quality` runs on push, but is not a required check. |
+| `ngosystem/product-governance` | D-0025 supersedes this part: require pull request flow into `main` and require the `product-governance-quality` context. | Product-governance protection evidence is recorded separately; backend and tenant frontend residuals remain. |
 | `pawelkojs-dotcom/ngos-payments-backend` | Keep private on the current free GitHub setup for now. | Branch protection/rulesets remain feature-gated; workflow success is observable but not enforced as a required check. |
 | `RC-Silesia/WEBSITE` | Keep public tenant frontend flow unchanged for now. | Pages deployment is not accessibility, content, asset-consent, staging or production readiness. |
 
@@ -256,10 +261,51 @@ reopened before any production-candidate decision, paid-plan decision,
 repository visibility change, multi-maintainer write model, or binding release,
 security or legal policy is moved into a repository.
 
+## Owner Decision Amendment - Product Governance - 2026-07-06
+
+The product owner later narrowed OPD-006 for `ngosystem/product-governance`
+without changing the GitHub plan:
+
+```text
+OPD_006_PRODUCT_GOVERNANCE_BRANCH_PROTECTION_DECISION_RECORDED
+PRODUCT_GOVERNANCE_PR_GATE_SELECTED
+PRODUCT_GOVERNANCE_REQUIRED_CHECK_CONTEXT_RECORDED
+PRODUCT_GOVERNANCE_ADMIN_ENFORCEMENT_DISABLED_RECORDED
+NO_PAID_GITHUB_PLAN_CHANGE
+```
+
+Repository-specific outcome:
+
+| Repository | Owner decision | Residual |
+| --- | --- | --- |
+| `ngosystem/product-governance` | Require pull request flow into `main` and require the existing `product-governance-quality` check context. | This is a governance-repository control only; it is not backend, tenant frontend, runtime, legal or production readiness. |
+| `pawelkojs-dotcom/ngos-payments-backend` | Keep private on the current free GitHub setup for now. | Branch protection/rulesets remain feature-gated; workflow success is observable but not evidenced as required-check enforcement. |
+| `RC-Silesia/WEBSITE` | Keep public tenant frontend flow unchanged for now. | Pages deployment is not accessibility, content, asset-consent, staging or production readiness. |
+
+Evidence for the product-governance settings is recorded in:
+
+```text
+docs/governance/GITHUB_BRANCH_PROTECTION_EVIDENCE_2026-07-06.md
+```
+
+Observed GitHub settings for `ngosystem/product-governance`:
+
+```text
+required_status_checks.strict=true
+required_status_checks.contexts=["product-governance-quality"]
+required_pull_request_reviews.required_approving_review_count=0
+enforce_admins.enabled=false
+allow_force_pushes.enabled=false
+allow_deletions.enabled=false
+```
+
+This amendment supersedes only the product-governance part of D-0024. The
+backend and tenant frontend residuals from D-0024 remain in force.
+
 ## Owner Decision Checklist
 
-When OPD-006 is ready for an owner decision, answer these questions in one
-decision record. Do not answer them by creating settings ad hoc in GitHub.
+When OPD-006 is reopened or extended, answer these questions in one decision
+record. Do not answer them by creating settings ad hoc in GitHub.
 
 | Area | Minimum owner answer | Evidence needed after action |
 | --- | --- | --- |
@@ -290,30 +336,30 @@ generic success token.
 
 ## What Closes OPD-006 For Now
 
-OPD-006 is narrowed by the owner decision above:
+OPD-006 is narrowed by the owner decisions above:
 
 ```text
 OPD_006_OWNER_DECISION_GITHUB_FREE_FOR_NOW_RECORDED
-BRANCH_PROTECTION_DEFERRED_WITH_OWNER_RESIDUAL
+OPD_006_PRODUCT_GOVERNANCE_BRANCH_PROTECTION_DECISION_RECORDED
+BACKEND_AND_TENANT_BRANCH_PROTECTION_REMAIN_DEFERRED
 ```
 
-This is not technical enforcement. It closes the pending owner-decision question
-for now by preserving GitHub Free and recording the residuals.
+This closes the pending owner-decision question for now by preserving GitHub
+Free, applying the product-governance PR/check decision, and recording the
+remaining backend and tenant frontend residuals.
 
 The decision must be reopened if any of these become true:
 
-- product-governance carries binding release, security, legal or pricing policy;
 - backend becomes a production-candidate repository;
 - tenant frontend becomes production-like;
 - additional maintainers receive direct write access;
 - the owner decides paid GitHub, public backend, EU forge migration or required
   checks should be reconsidered.
 
-Until an actual GitHub setting changes:
+For backend and tenant frontend repositories, this residual remains true:
 
 ```text
-NO_BRANCH_PROTECTION_CHANGE
-NO_REQUIRED_CHECKS_CONFIGURATION_CHANGE
+BACKEND_AND_TENANT_BRANCH_PROTECTION_REMAIN_DEFERRED
 ```
 
 ## Forbidden Claims
@@ -333,16 +379,18 @@ PUBLIC_SAAS_LAUNCHED
 
 ## Acceptance Boundary
 
-This is decision preparation only.
+This is an OPD-006 owner-decision and evidence summary only.
 
 ```text
 OPD_006_BRANCH_PROTECTION_CONFIGURATION_OPTIONS_RECORDED
 OPD_006_OWNER_DECISION_GITHUB_FREE_FOR_NOW_RECORDED
-BRANCH_PROTECTION_DEFERRED_WITH_OWNER_RESIDUAL
+OPD_006_PRODUCT_GOVERNANCE_BRANCH_PROTECTION_DECISION_RECORDED
+PRODUCT_GOVERNANCE_PR_GATE_SELECTED
+PRODUCT_GOVERNANCE_REQUIRED_CHECK_CONTEXT_RECORDED
 GITHUB_FREE_CURRENT_PLAN_ACCEPTED_FOR_NOW
 BACKEND_PRIVATE_BRANCH_PROTECTION_FEATURE_GATED_RESIDUAL_ACCEPTED
-NO_BRANCH_PROTECTION_CHANGE
-NO_REQUIRED_CHECKS_CONFIGURATION_CHANGE
+BACKEND_AND_TENANT_BRANCH_PROTECTION_REMAIN_DEFERRED
+NO_PAID_GITHUB_PLAN_CHANGE
 NO_REPOSITORY_TRANSFER
 NO_CODE_TRANSFER
 NO_RUNTIME_EFFECT
