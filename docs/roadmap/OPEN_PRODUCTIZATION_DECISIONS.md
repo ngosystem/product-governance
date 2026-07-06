@@ -11,6 +11,7 @@ NGOSYSTEM_BRANCH_PROTECTION_REQUIRED_CHECKS_POLICY_RECORDED
 NGOSYSTEM_GITHUB_BRANCH_PROTECTION_RECON_RECORDED
 OPD_006_BRANCH_PROTECTION_CONFIGURATION_OPTIONS_RECORDED
 NGOSYSTEM_REPOSITORY_CANDIDATE_MAP_RECORDED
+NGOSYSTEM_EU_FORGE_ALTERNATIVES_RECON_RECORDED
 NGOSYSTEM_CONTINUOUS_QUALITY_LOOP_RECORDED
 NO_DECISION_EXECUTED
 NO_REPOSITORY_TRANSFER
@@ -58,6 +59,7 @@ docs/templates/REPOSITORY_TRANSFER_DECISION_TEMPLATE.md
 | OPD-010 | Support and incident operating model | OPEN / SLA_POLICY_PENDING | Decide production support channel, incident severity model, contact-data boundary and SLA/non-SLA language. | Support/incidents operating-model decision. |
 | OPD-011 | Production-candidate scope | OPEN / PRODUCTION_CANDIDATE_NOT_DECLARED | Decide what exact module, tenant, environment and residual set may first become a production candidate. | Product owner production-candidate decision. |
 | OPD-012 | Product website and public narrative | OPEN / PUBLIC_PRODUCT_SITE_PENDING | Decide whether `ngosystem` needs a product site separate from tenant websites. | Product communication decision; content and asset approvals. |
+| OPD-013 | EU forge alternative strategy | OPEN / EU_FORGE_ALTERNATIVES_RECON_REPORTED / EU_FORGE_DUE_DILIGENCE_PENDING / NO_PRIMARY_REMOTE_CHANGE | Decide whether GitHub remains primary, EU Forgejo/GitLab becomes a mirror, or a future repository transfer is justified. | EU forge strategy decision or repository transfer decision. |
 
 ## Current Recommended Ordering
 
@@ -84,6 +86,7 @@ Recommended order:
 | OPD-006 | Branch protection configuration options recorded; owner decision still pending; no GitHub setting changed. | `docs/governance/BRANCH_PROTECTION_CONFIGURATION_OPTIONS.md` |
 | OPD-006 | Owner decision checklist recorded; it narrows the next GitHub action but does not close OPD-006. | `docs/governance/BRANCH_PROTECTION_CONFIGURATION_OPTIONS.md` |
 | OPD-001/002/003/004/012 | Future repository candidates recorded as options, not approvals. | `docs/governance/REPOSITORY_CANDIDATE_MAP.md` |
+| OPD-013 | EU forge alternatives recorded as strategic options, not migration decisions. | `docs/governance/EU_FORGE_ALTERNATIVES_RECON.md` |
 
 ## Explicit Non-Decisions
 

@@ -20,6 +20,7 @@ NGOSYSTEM_BRANCH_PROTECTION_REQUIRED_CHECKS_POLICY_RECORDED
 NGOSYSTEM_GITHUB_BRANCH_PROTECTION_RECON_RECORDED
 OPD_006_BRANCH_PROTECTION_CONFIGURATION_OPTIONS_RECORDED
 NGOSYSTEM_REPOSITORY_CANDIDATE_MAP_RECORDED
+NGOSYSTEM_EU_FORGE_ALTERNATIVES_RECON_RECORDED
 NGOSYSTEM_CONTINUOUS_QUALITY_LOOP_RECORDED
 NGOSYSTEM_CRYSTALLINE_SOFTWARE_MINIMALISM_RECORDED
 DEPENDENCY_FREE_GUARD_REPORTED_WIRED
@@ -51,6 +52,7 @@ It records:
 - tenant-template strategy;
 - repository visibility policy;
 - repository candidate map;
+- EU forge alternatives recon;
 - branch protection and required checks policy;
 - branch protection and required checks recon;
 - branch protection configuration options;
@@ -92,6 +94,12 @@ The current repository candidate map is recorded in:
 
 ```text
 docs/governance/REPOSITORY_CANDIDATE_MAP.md
+```
+
+The current EU forge alternatives recon is recorded in:
+
+```text
+docs/governance/EU_FORGE_ALTERNATIVES_RECON.md
 ```
 
 Repository-transfer decisions must use:
