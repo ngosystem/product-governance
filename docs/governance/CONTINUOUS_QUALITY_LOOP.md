@@ -8,8 +8,8 @@ PRODUCT_GOVERNANCE_QUALITY_CHECK_REPORTED_WIRED
 QUALITY_LOOP_CI_WORKFLOW_REPORTED_WIRED
 NGOSYSTEM_CRYSTALLINE_SOFTWARE_MINIMALISM_RECORDED
 DEPENDENCY_FREE_GUARD_REPORTED_WIRED
-NO_BRANCH_PROTECTION_CHANGE
-NO_REQUIRED_CHECKS_CONFIGURATION_CHANGE
+PRODUCT_GOVERNANCE_REQUIRED_CHECK_CONTEXT_RECORDED
+BACKEND_AND_TENANT_BRANCH_PROTECTION_REMAIN_DEFERRED
 NO_RUNTIME_EFFECT
 NOT_PRODUCTION_READY
 ```
@@ -126,15 +126,18 @@ systems.
 
 ## CI Boundary
 
-The workflow reports the quality loop on GitHub Actions.
+This document originally reported the quality loop on GitHub Actions without
+configuring GitHub settings.
 
-It does not configure branch protection or make the check required.
+D-0025 later records the owner decision and evidence that
+`product-governance-quality` is the required check context for
+`ngosystem/product-governance`. That later decision does not change backend or
+tenant frontend protection residuals.
 
-Current status remains:
+Current status for implementation and tenant repositories remains:
 
 ```text
-NO_BRANCH_PROTECTION_CHANGE
-NO_REQUIRED_CHECKS_CONFIGURATION_CHANGE
+BACKEND_AND_TENANT_BRANCH_PROTECTION_REMAIN_DEFERRED
 ```
 
 Required-check enforcement is still governed by OPD-006 and requires separate
@@ -156,7 +159,7 @@ The guard fails if npm dependency fields become populated or a generated
 
 | Residual | Status | Trigger to close |
 | --- | --- | --- |
-| GitHub branch protection is not configured by this change. | OPEN | Separate OPD-006 configuration decision and evidence. |
+| Backend and tenant frontend branch protection are not configured by this change. | OPEN | Separate repository-specific OPD-006 reopening and evidence. |
 | The checker is structural, not semantic. | ACCEPTED_BOUNDARY | Add targeted checks only when a concrete governance failure pattern appears. |
 | Runtime/security quality loops remain in implementation repositories. | OUT_OF_SCOPE | Backend/frontend repository-specific tasks. |
 
@@ -181,8 +184,8 @@ NGOSYSTEM_CONTINUOUS_QUALITY_LOOP_RECORDED
 PRODUCT_GOVERNANCE_QUALITY_CHECK_REPORTED_WIRED
 QUALITY_LOOP_CI_WORKFLOW_REPORTED_WIRED
 DEPENDENCY_FREE_GUARD_REPORTED_WIRED
-NO_BRANCH_PROTECTION_CHANGE
-NO_REQUIRED_CHECKS_CONFIGURATION_CHANGE
+PRODUCT_GOVERNANCE_REQUIRED_CHECK_CONTEXT_RECORDED
+BACKEND_AND_TENANT_BRANCH_PROTECTION_REMAIN_DEFERRED
 NO_RUNTIME_EFFECT
 NOT_PRODUCTION_READY
 ```
