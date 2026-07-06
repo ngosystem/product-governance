@@ -4,7 +4,10 @@ Status:
 
 ```text
 OPD_006_BRANCH_PROTECTION_CONFIGURATION_OPTIONS_RECORDED
-OWNER_DECISION_PENDING
+OPD_006_OWNER_DECISION_GITHUB_FREE_FOR_NOW_RECORDED
+BRANCH_PROTECTION_DEFERRED_WITH_OWNER_RESIDUAL
+GITHUB_FREE_CURRENT_PLAN_ACCEPTED_FOR_NOW
+BACKEND_PRIVATE_BRANCH_PROTECTION_FEATURE_GATED_RESIDUAL_ACCEPTED
 NO_BRANCH_PROTECTION_CHANGE
 NO_REQUIRED_CHECKS_CONFIGURATION_CHANGE
 NO_REPOSITORY_TRANSFER
@@ -14,11 +17,12 @@ NOT_PRODUCTION_READY
 ```
 
 This document records owner-decision options after the branch protection policy
-and the read-only GitHub settings recon.
+the read-only GitHub settings recon, and the owner's current decision to keep
+ngOSystem on GitHub Free for now.
 
-It prepares a decision. It does not configure GitHub branch protection,
-rulesets, required checks, environments, repository transfers or repository
-visibility.
+It records a decision to defer branch-protection enforcement with explicit
+residuals. It does not configure GitHub branch protection, rulesets, required
+checks, environments, repository transfers or repository visibility.
 
 ## Source Evidence
 
@@ -226,7 +230,31 @@ Trigger to revisit:
 | Backend | Option B now; Option C before production candidate | Privacy remains useful, but required checks enforcement is strategically desirable before production. |
 | Tenant frontend | Option E now; stronger checks before production candidate | Pages deployment exists, but not enough for production readiness. |
 
-This matrix is preparatory. It is not the final owner decision.
+This matrix prepared the owner decision recorded below.
+
+## Owner Decision Recorded - 2026-07-06
+
+The product owner decision for OPD-006 is:
+
+```text
+GITHUB_FREE_CURRENT_PLAN_ACCEPTED_FOR_NOW
+BRANCH_PROTECTION_DEFERRED_WITH_OWNER_RESIDUAL
+NO_BRANCH_PROTECTION_CHANGE
+NO_REQUIRED_CHECKS_CONFIGURATION_CHANGE
+```
+
+Repository-specific outcome:
+
+| Repository | Owner decision | Residual |
+| --- | --- | --- |
+| `ngosystem/product-governance` | Keep direct owner commits acceptable while the repository remains docs-only governance. | `Product governance quality` runs on push, but is not a required check. |
+| `pawelkojs-dotcom/ngos-payments-backend` | Keep private on the current free GitHub setup for now. | Branch protection/rulesets remain feature-gated; workflow success is observable but not enforced as a required check. |
+| `RC-Silesia/WEBSITE` | Keep public tenant frontend flow unchanged for now. | Pages deployment is not accessibility, content, asset-consent, staging or production readiness. |
+
+This decision is an accepted residual, not a protection claim. It must be
+reopened before any production-candidate decision, paid-plan decision,
+repository visibility change, multi-maintainer write model, or binding release,
+security or legal policy is moved into a repository.
 
 ## Owner Decision Checklist
 
@@ -260,19 +288,30 @@ NO_REQUIRED_CHECKS_CONFIGURATION_CHANGE
 If GitHub settings are changed, record the concrete result instead. Do not use a
 generic success token.
 
-## What Would Close OPD-006
+## What Closes OPD-006 For Now
 
-OPD-006 can close only after an explicit owner decision records one of these:
-
-- protection configured with evidence;
-- protection deliberately deferred with accepted residuals;
-- repository visibility or plan changed with evidence;
-- repository-specific protection is no longer applicable and why.
-
-Until then:
+OPD-006 is narrowed by the owner decision above:
 
 ```text
-OWNER_DECISION_PENDING
+OPD_006_OWNER_DECISION_GITHUB_FREE_FOR_NOW_RECORDED
+BRANCH_PROTECTION_DEFERRED_WITH_OWNER_RESIDUAL
+```
+
+This is not technical enforcement. It closes the pending owner-decision question
+for now by preserving GitHub Free and recording the residuals.
+
+The decision must be reopened if any of these become true:
+
+- product-governance carries binding release, security, legal or pricing policy;
+- backend becomes a production-candidate repository;
+- tenant frontend becomes production-like;
+- additional maintainers receive direct write access;
+- the owner decides paid GitHub, public backend, EU forge migration or required
+  checks should be reconsidered.
+
+Until an actual GitHub setting changes:
+
+```text
 NO_BRANCH_PROTECTION_CHANGE
 NO_REQUIRED_CHECKS_CONFIGURATION_CHANGE
 ```
@@ -298,7 +337,10 @@ This is decision preparation only.
 
 ```text
 OPD_006_BRANCH_PROTECTION_CONFIGURATION_OPTIONS_RECORDED
-OWNER_DECISION_PENDING
+OPD_006_OWNER_DECISION_GITHUB_FREE_FOR_NOW_RECORDED
+BRANCH_PROTECTION_DEFERRED_WITH_OWNER_RESIDUAL
+GITHUB_FREE_CURRENT_PLAN_ACCEPTED_FOR_NOW
+BACKEND_PRIVATE_BRANCH_PROTECTION_FEATURE_GATED_RESIDUAL_ACCEPTED
 NO_BRANCH_PROTECTION_CHANGE
 NO_REQUIRED_CHECKS_CONFIGURATION_CHANGE
 NO_REPOSITORY_TRANSFER

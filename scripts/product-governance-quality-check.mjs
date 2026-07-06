@@ -55,7 +55,7 @@ const requiredDecisionLogSections = [
   "## Acceptance Boundary"
 ];
 const requiredDecisionIds = Array.from(
-  { length: 23 },
+  { length: 24 },
   (_, index) => `D-${String(index + 1).padStart(4, "0")}`
 );
 const requiredOperatingModelInvariants = [

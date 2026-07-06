@@ -10,6 +10,7 @@ NGOSYSTEM_REPOSITORY_VISIBILITY_POLICY_RECORDED
 NGOSYSTEM_BRANCH_PROTECTION_REQUIRED_CHECKS_POLICY_RECORDED
 NGOSYSTEM_GITHUB_BRANCH_PROTECTION_RECON_RECORDED
 OPD_006_BRANCH_PROTECTION_CONFIGURATION_OPTIONS_RECORDED
+OPD_006_OWNER_DECISION_GITHUB_FREE_FOR_NOW_RECORDED
 NGOSYSTEM_REPOSITORY_CANDIDATE_MAP_RECORDED
 NGOSYSTEM_EU_FORGE_ALTERNATIVES_RECON_RECORDED
 NGOSYSTEM_CONTINUOUS_QUALITY_LOOP_RECORDED
@@ -52,7 +53,7 @@ docs/templates/REPOSITORY_TRANSFER_DECISION_TEMPLATE.md
 | OPD-003 | Tenant frontend strategy | OPEN / TENANT_BOUNDARY_PRESERVED | Decide whether future tenant frontends stay in tenant organizations, use templates, or share a product-owned starter. | Tenant frontend strategy decision. |
 | OPD-004 | Tenant-template extraction | OPEN / NO_TEMPLATE_RELEASE | Decide what becomes a reusable tenant template after RC Silesia. | Template package decision and evidence package. |
 | OPD-005 | Repository visibility policy | OPEN / VISIBILITY_POLICY_PENDING | Decide which product repositories should be public/private and why. | GitHub visibility and access decision. |
-| OPD-006 | Branch protection and required checks policy | OPEN / POLICY_RECON_AND_OPTIONS_REPORTED / OWNER_DECISION_PENDING | Decide when direct commits remain acceptable and when PR-required checks become mandatory. | GitHub operating-model update and repo-level configuration evidence. |
+| OPD-006 | Branch protection and required checks policy | DEFERRED / GITHUB_FREE_CURRENT_PLAN_ACCEPTED_FOR_NOW / BRANCH_PROTECTION_DEFERRED_WITH_OWNER_RESIDUAL | GitHub Free remains the current choice; branch protection/required checks enforcement is not configured and must be reopened before production-candidate scope. | Owner decision record and future GitHub settings evidence if reopened. |
 | OPD-007 | Product release train | OPEN / RELEASE_TRAIN_PENDING | Decide how product releases are named, scoped and linked to tenant deployments. | Release train decision and release-gate checklist. |
 | OPD-008 | Product pricing and billing boundary | OPEN / COMMERCIAL_POLICY_PENDING | Decide whether and how commercial plans attach to modules such as `ngOPay`, `ngOStart` or tenant packages. | Pricing/billing decision; no runtime by default. |
 | OPD-009 | Compliance applicability baseline closure | OPEN / LEGAL_REVIEW_PENDING | Decide applicability and closure path for BIP, WCAG, e-Doreczenia, Login.gov.pl, RODO/DPA and related Polish public-sector requirements. | Legal/compliance decision and review evidence. |
@@ -83,8 +84,8 @@ Recommended order:
 | OPD-006 | Branch protection and required checks policy reported, no GitHub setting changed. | `docs/governance/BRANCH_PROTECTION_REQUIRED_CHECKS_POLICY.md` |
 | OPD-006 | Read-only GitHub settings recon recorded: product-governance and WEBSITE unprotected; backend protection/rulesets feature-gated while private on current plan; no setting changed. | `docs/governance/GITHUB_BRANCH_PROTECTION_RECON_2026-07-06.md` |
 | OPD-006 | Product-governance quality workflow reported wired, but not configured as a required check. | `docs/governance/CONTINUOUS_QUALITY_LOOP.md` |
-| OPD-006 | Branch protection configuration options recorded; owner decision still pending; no GitHub setting changed. | `docs/governance/BRANCH_PROTECTION_CONFIGURATION_OPTIONS.md` |
-| OPD-006 | Owner decision checklist recorded; it narrows the next GitHub action but does not close OPD-006. | `docs/governance/BRANCH_PROTECTION_CONFIGURATION_OPTIONS.md` |
+| OPD-006 | Branch protection configuration options recorded; owner decision later narrowed OPD-006 to GitHub Free for now with accepted residuals; no GitHub setting changed. | `docs/governance/BRANCH_PROTECTION_CONFIGURATION_OPTIONS.md` |
+| OPD-006 | Owner decision checklist superseded by the 2026-07-06 decision: keep GitHub Free for now, reopen before production-candidate scope or any required-check enforcement claim. | `docs/governance/BRANCH_PROTECTION_CONFIGURATION_OPTIONS.md` |
 | OPD-001/002/003/004/012 | Future repository candidates recorded as options, not approvals. | `docs/governance/REPOSITORY_CANDIDATE_MAP.md` |
 | OPD-013 | EU forge alternatives recorded as strategic options, not migration decisions. | `docs/governance/EU_FORGE_ALTERNATIVES_RECON.md` |
 
