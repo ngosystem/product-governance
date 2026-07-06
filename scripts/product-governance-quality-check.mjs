@@ -48,6 +48,16 @@ const dependencyFields = [
   "peerDependencies",
   "bundledDependencies"
 ];
+const requiredDecisionLogSections = [
+  "## Required Form For New Decisions",
+  "## Forbidden Shortcuts",
+  "## Status Discipline",
+  "## Acceptance Boundary"
+];
+const requiredDecisionIds = Array.from(
+  { length: 22 },
+  (_, index) => `D-${String(index + 1).padStart(4, "0")}`
+);
 
 function normalizePath(filePath) {
   return filePath.split(path.sep).join("/");
@@ -165,6 +175,31 @@ function checkPackageManifest() {
   );
 }
 
+function checkDecisionLogIntegrity(text) {
+  for (const section of requiredDecisionLogSections) {
+    assert(
+      text.includes(section),
+      `docs/governance/DECISION_LOG.md: required section missing: ${section}`
+    );
+  }
+
+  const decisionIds = Array.from(
+    text.matchAll(/^\| (D-\d{4}) \|/gm),
+    (match) => match[1]
+  );
+  assert(
+    decisionIds.length === requiredDecisionIds.length,
+    `docs/governance/DECISION_LOG.md: expected ${requiredDecisionIds.length} decision rows, found ${decisionIds.length}`
+  );
+
+  for (const [index, expectedId] of requiredDecisionIds.entries()) {
+    assert(
+      decisionIds[index] === expectedId,
+      `docs/governance/DECISION_LOG.md: decision row ${index + 1} must be ${expectedId}, found ${decisionIds[index] ?? "MISSING"}`
+    );
+  }
+}
+
 const files = await walk(root);
 const trackedLikeFiles = files.filter((filePath) => {
   const rel = normalizePath(path.relative(root, filePath));
@@ -192,7 +227,9 @@ for (const filePath of trackedLikeFiles) {
 }
 
 const readmeText = readFileSync(path.join(root, "README.md"), "utf8");
+const decisionLogText = readFileSync(path.join(root, "docs/governance/DECISION_LOG.md"), "utf8");
 checkReadmeLinks(readmeText);
+checkDecisionLogIntegrity(decisionLogText);
 checkPackageManifest();
 
 console.log("PRODUCT_GOVERNANCE_QUALITY_LOOP_CHECK");
