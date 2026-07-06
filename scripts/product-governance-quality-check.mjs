@@ -55,9 +55,19 @@ const requiredDecisionLogSections = [
   "## Acceptance Boundary"
 ];
 const requiredDecisionIds = Array.from(
-  { length: 22 },
+  { length: 23 },
   (_, index) => `D-${String(index + 1).padStart(4, "0")}`
 );
+const requiredOperatingModelInvariants = [
+  "## Multi-Agent Working Tree Protocol",
+  "The first agent that starts a write-capable thread in a working tree owns that",
+  "wait until the first agent finishes",
+  "work read-only and report findings without modifying files",
+  "use a separate `git worktree` or separate clone",
+  "It must not happen through concurrent writes",
+  "git status --short --branch",
+  "MULTI_AGENT_WORKTREE_ISOLATION_RECORDED"
+];
 
 function normalizePath(filePath) {
   return filePath.split(path.sep).join("/");
@@ -200,6 +210,15 @@ function checkDecisionLogIntegrity(text) {
   }
 }
 
+function checkOperatingModelIntegrity(text) {
+  for (const invariant of requiredOperatingModelInvariants) {
+    assert(
+      text.includes(invariant),
+      `docs/governance/GITHUB_OPERATING_MODEL.md: required multi-agent worktree invariant missing: ${invariant}`
+    );
+  }
+}
+
 const files = await walk(root);
 const trackedLikeFiles = files.filter((filePath) => {
   const rel = normalizePath(path.relative(root, filePath));
@@ -228,8 +247,10 @@ for (const filePath of trackedLikeFiles) {
 
 const readmeText = readFileSync(path.join(root, "README.md"), "utf8");
 const decisionLogText = readFileSync(path.join(root, "docs/governance/DECISION_LOG.md"), "utf8");
+const operatingModelText = readFileSync(path.join(root, "docs/governance/GITHUB_OPERATING_MODEL.md"), "utf8");
 checkReadmeLinks(readmeText);
 checkDecisionLogIntegrity(decisionLogText);
+checkOperatingModelIntegrity(operatingModelText);
 checkPackageManifest();
 
 console.log("PRODUCT_GOVERNANCE_QUALITY_LOOP_CHECK");

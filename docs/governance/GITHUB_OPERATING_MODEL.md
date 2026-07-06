@@ -9,6 +9,7 @@ NGOSYSTEM_BRANCH_PROTECTION_REQUIRED_CHECKS_POLICY_RECORDED
 NGOSYSTEM_GITHUB_BRANCH_PROTECTION_RECON_RECORDED
 OPD_006_BRANCH_PROTECTION_CONFIGURATION_OPTIONS_RECORDED
 NGOSYSTEM_CONTINUOUS_QUALITY_LOOP_RECORDED
+MULTI_AGENT_WORKTREE_ISOLATION_RECORDED
 ORG_REPOSITORY_CLASSES_RECORDED
 TENANT_REPOSITORY_BOUNDARY_RECORDED
 NO_REPOSITORY_TRANSFER
@@ -125,6 +126,42 @@ docs/governance/CONTINUOUS_QUALITY_LOOP.md
 This reports quality-loop wiring only. It does not make the workflow a required
 check.
 
+## Multi-Agent Working Tree Protocol
+
+This protocol applies symmetrically to Codex, Claude, human-operated agents and
+any other AI-assisted tool writing into a repository checkout.
+
+The first agent that starts a write-capable thread in a working tree owns that
+thread until one of the following happens:
+
+- the thread is committed and pushed;
+- the thread is explicitly handed off with a clean status report;
+- the thread is abandoned and the working tree is restored to a known clean
+  state.
+
+While one agent owns a working tree, any second agent must choose one of these
+paths:
+
+- wait until the first agent finishes;
+- work read-only and report findings without modifying files;
+- use a separate `git worktree` or separate clone for its own write-capable
+  work.
+
+Cross-agent handoff must happen through a commit, patch, pull request, evidence
+package, or explicit status note. It must not happen through concurrent writes
+to the same files in the same working tree.
+
+Before starting write-capable work, an agent should check:
+
+```text
+git status --short --branch
+```
+
+If the tree is dirty and the changes were not created by that agent in the same
+thread, the agent must stop, switch to read-only review, or create a separate
+worktree. This prevents partial writes, truncated files and ambiguous ownership
+of local changes.
+
 ## Status Discipline
 
 GitHub repository existence does not imply product readiness.
@@ -174,6 +211,7 @@ NGOSYSTEM_BRANCH_PROTECTION_REQUIRED_CHECKS_POLICY_RECORDED
 NGOSYSTEM_GITHUB_BRANCH_PROTECTION_RECON_RECORDED
 OPD_006_BRANCH_PROTECTION_CONFIGURATION_OPTIONS_RECORDED
 NGOSYSTEM_CONTINUOUS_QUALITY_LOOP_RECORDED
+MULTI_AGENT_WORKTREE_ISOLATION_RECORDED
 NO_BRANCH_PROTECTION_CHANGE
 NO_REQUIRED_CHECKS_CONFIGURATION_CHANGE
 NO_RUNTIME_EFFECT
